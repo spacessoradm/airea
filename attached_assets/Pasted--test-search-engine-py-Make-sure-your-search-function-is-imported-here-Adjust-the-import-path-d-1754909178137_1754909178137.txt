@@ -1,0 +1,79 @@
+# test_search_engine.py
+# Make sure your search function is imported here
+# Adjust the import path depending on your project structure
+from search_engine import search
+
+# ---------- SAMPLE TEST DATA ----------
+# In production, this should be your actual property dataset
+# but here we mock some realistic data for testing
+mock_data = [
+    # Residential
+    {"project_name": "Casa Indah", "type": "residential", "area": "Damansara", "price": 450000, "rent": 1800, "bedrooms": 3, "location": (3.1503, 101.5903)},
+    {"project_name": "Sunway Vivaldi", "type": "residential", "area": "Mont Kiara", "price": 2000000, "rent": 7000, "bedrooms": 4, "location": (3.1690, 101.6500)},
+    {"project_name": "Menara Kepong", "type": "residential", "area": "Kepong", "price": 350000, "rent": 1500, "bedrooms": 2, "location": (3.2140, 101.6350)},
+
+    # Commercial
+    {"project_name": "Empire City", "type": "commercial", "area": "Damansara Perdana", "price": 800000, "rent": 6000, "bedrooms": None, "location": (3.1600, 101.6110)},
+    {"project_name": "The Curve Offices", "type": "commercial", "area": "Mutiara Damansara", "price": 950000, "rent": 7000, "bedrooms": None, "location": (3.1580, 101.6115)},
+
+    # Industrial
+    {"project_name": "Shah Alam Industrial Park", "type": "industrial", "area": "Shah Alam", "price": 1500000, "rent": 12000, "bedrooms": None, "location": (3.0738, 101.5183)},
+    {"project_name": "Rawang Factory Hub", "type": "industrial", "area": "Rawang", "price": 2000000, "rent": 15000, "bedrooms": None, "location": (3.3210, 101.5750)}
+]
+
+# ---------- TEST CASES ----------
+
+def test_exact_name_match():
+    results = search(query="Casa Indah", filters={}, dataset=mock_data)
+    assert any("Casa Indah" in p['project_name'] for p in results)
+
+def test_partial_name_match():
+    results = search(query="Vivaldi", filters={}, dataset=mock_data)
+    assert any("Vivaldi" in p['project_name'] for p in results)
+
+def test_price_filter():
+    results = search(query="", filters={"max_price": 500000}, dataset=mock_data)
+    assert all(p['price'] <= 500000 for p in results)
+
+def test_rent_filter():
+    results = search(query="", filters={"max_rent": 2000}, dataset=mock_data)
+    assert all(p['rent'] <= 2000 for p in results)
+
+def test_bedroom_filter():
+    results = search(query="", filters={"bedrooms": 3}, dataset=mock_data)
+    assert all(p.get('bedrooms') == 3 for p in results if p.get('bedrooms') is not None)
+
+def test_residential_type():
+    results = search(query="", filters={"type": "residential"}, dataset=mock_data)
+    assert all(p['type'] == "residential" for p in results)
+
+def test_commercial_type():
+    results = search(query="", filters={"type": "commercial"}, dataset=mock_data)
+    assert all(p['type'] == "commercial" for p in results)
+
+def test_industrial_type():
+    results = search(query="", filters={"type": "industrial"}, dataset=mock_data)
+    assert all(p['type'] == "industrial" for p in results)
+
+def test_area_search():
+    results = search(query="Damansara", filters={}, dataset=mock_data)
+    assert all("Damansara" in p['area'] or "Damansara" in p['project_name'] for p in results)
+
+def test_radius_search():
+    # Example: within 5km of Sunway Giza Mall (3.1535, 101.6050)
+    center = (3.1535, 101.6050)
+    radius_km = 5
+    results = search(query="", filters={"radius_km": radius_km, "center": center}, dataset=mock_data)
+    assert all(haversine(center, p['location']) <= radius_km for p in results)
+
+# ---------- HELPER FUNCTION ----------
+import math
+def haversine(coord1, coord2):
+    R = 6371  # Earth radius in km
+    lat1, lon1 = coord1
+    lat2, lon2 = coord2
+    phi1, phi2 = math.radians(lat1), math.radians(lat2)
+    dphi = math.radians(lat2 - lat1)
+    dlambda = math.radians(lon2 - lon1)
+    a = math.sin(dphi / 2) ** 2 + math.cos(phi1) * math.cos(phi2) * math.sin(dlambda / 2) ** 2
+    return R * (2 * math.atan2(math.sqrt(a), math.sqrt(1 - a)))

@@ -1,0 +1,9 @@
+title,property_type,price,bedrooms,bathrooms,square_feet,address,city,state,postal_code,latitude,longitude,listing_type,tenure,title_type,parking
+Sky Residences KLCC,condominium,2800,2,2,950,"168 Jalan Ampang, KLCC",Kuala Lumpur,Kuala Lumpur,50450,3.1570,101.7123,rent,freehold,individual,2
+The Sentral Residences,condominium,3200,3,2,1100,"KL Sentral",Kuala Lumpur,Kuala Lumpur,50470,3.1327,101.6868,rent,leasehold,individual,1
+Mont Kiara Aman,condominium,2500,2,2,900,"2 Jalan Kiara, Mont Kiara",Kuala Lumpur,Kuala Lumpur,50480,3.1728,101.6507,rent,freehold,individual,2
+Damansara Heights Villa,house,5500,4,3,2200,"15 Jalan Semantan, Damansara Heights",Kuala Lumpur,Kuala Lumpur,50490,3.1516,101.6635,rent,freehold,individual,3
+PJ Trade Centre Office,office,1800,0,1,800,"8 Jalan PJU 8/5A, Damansara Perdana",Petaling Jaya,Selangor,47820,3.1319,101.6841,rent,leasehold,strata,1
+Subang Jaya Townhouse,townhouse,3800,3,3,1600,"UEP Subang Jaya",Subang Jaya,Selangor,47500,3.0733,101.5185,rent,freehold,individual,2
+Shah Alam Industrial,warehouse,2200,0,2,5000,"Section 15, Shah Alam",Shah Alam,Selangor,40200,3.0597,101.5025,rent,leasehold,master,5
+Klang Valley Shophouse,shop,1500,0,1,600,"Jalan Meru, Klang",Klang,Selangor,41050,3.0319,101.4436,rent,freehold,strata,0

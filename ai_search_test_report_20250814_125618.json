@@ -1,0 +1,33 @@
+{
+  "summary": {
+    "timestamp": "2025-08-14T12:56:18.159666",
+    "total_tests": 1,
+    "passed_tests": 1,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "avg_response_time": 1.8221051692962646,
+    "max_response_time": 1.8221051692962646
+  },
+  "language_breakdown": {
+    "en": {
+      "total": 1,
+      "passed": 1
+    }
+  },
+  "detailed_results": [
+    {
+      "test_id": "TC-AI-001-1",
+      "description": "Simple bedroom query",
+      "query": "2 bedroom apartment",
+      "language": "en",
+      "expected_filters": {
+        "bedrooms": 2,
+        "propertyType": "apartment"
+      },
+      "passed": true,
+      "error_message": "All filters matched successfully",
+      "response_time": 1.8221051692962646,
+      "properties_count": 25
+    }
+  ]
+}

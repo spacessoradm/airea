@@ -1,0 +1,647 @@
+/* Cache-busting comment for QuickFilters sticky layout - v6.2 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(142, 71%, 45%);
+  --secondary-foreground: hsl(211, 100%, 99%);
+  --accent: hsl(0, 84%, 60%);
+  --accent-foreground: hsl(60, 9.1%, 97.8%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --neutral-400: hsl(215, 20%, 65%);
+  --neutral-100: hsl(210, 40%, 98%);
+  
+  /* iOS Safe Area Insets - with fallback values */
+  --safe-area-inset-top: env(safe-area-inset-top, 0px);
+  --safe-area-inset-right: env(safe-area-inset-right, 0px);
+  --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-inset-left: env(safe-area-inset-left, 0px);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(142, 71%, 45%);
+  --secondary-foreground: hsl(211, 100%, 99%);
+  --accent: hsl(0, 84%, 60%);
+  --accent-foreground: hsl(60, 9.1%, 97.8%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+    /* Prevent flash of wrong background color during PWA startup */
+    background-color: #3b82f6;
+    /* iOS Safari performance optimizations */
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    /* Hardware acceleration for smooth scrolling - NOT on body to preserve fixed positioning */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Ultra-enhanced smooth scrolling for mobile */
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    /* Maximum touch responsiveness */
+    touch-action: pan-y;
+    will-change: scroll-position;
+  }
+  
+  /* PWA mode styling */
+  .pwa-mode body {
+    background: linear-gradient(to bottom, #3b82f6, #1d4ed8);
+    overscroll-behavior: none;
+  }
+  
+  /* iOS Safari specific optimizations */
+  @supports (-webkit-touch-callout: none) {
+    * {
+      /* Reduce repaints on iOS - transform removed to preserve fixed positioning */
+      -webkit-backface-visibility: hidden;
+    }
+    
+    /* Ultra-optimize scrolling on iOS */
+    .overflow-auto, .overflow-y-auto, .overflow-x-auto {
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+      overscroll-behavior: none;
+      touch-action: pan-y;
+      will-change: scroll-position;
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+    }
+  }
+}
+
+@layer components {
+  .search-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .map-container {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 400px;
+  }
+  
+  .property-card-hover {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  
+  .property-card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  }
+
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* PWA-specific styles */
+  .pwa-safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  /* Touch-friendly interactions */
+  @media (hover: none) {
+    .property-card-hover:hover {
+      transform: none;
+    }
+    
+    .property-card-hover:active {
+      transform: scale(0.98);
+      transition: transform 0.1s ease-in-out;
+    }
+  }
+
+  /* Mobile tap highlighting */
+  button, .clickable {
+    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.2);
+  }
+
+  /* Prevent zoom on inputs on iOS */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  /* Ultra-smooth mobile scrolling */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
+    will-change: scroll-position;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  /* Ultra-smooth property list scrolling */
+  .property-list-container {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: none;
+    will-change: scroll-position;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    touch-action: pan-y;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Optimize property card rendering for smooth scrolling */
+  .property-card {
+    contain: layout style paint;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  /* Reduce paint operations during scroll */
+  .property-card-image {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* PWA-specific mobile app styling - clean native app look */
+  .pwa-mode {
+    --mobile-padding: 1rem;
+    --safe-area-top: env(safe-area-inset-top);
+    --safe-area-bottom: env(safe-area-inset-bottom);
+    padding-top: var(--safe-area-top);
+    padding-bottom: var(--safe-area-bottom);
+    background: #f8fafc;
+  }
+
+  /* PWA specific fixes - minimal and non-intrusive */
+  @media (display-mode: standalone) {
+    /* Ensure body has bottom padding for nav */
+    body {
+      padding-bottom: 80px !important;
+      background: white !important;
+    }
+    
+    /* Ensure mobile navigation is visible */
+    .mobile-nav {
+      z-index: 100 !important;
+    }
+    
+    /* Prevent any loader from being full-screen blue EXCEPT splash screen */
+    .fixed.inset-0:not(.splash-screen-container) {
+      background: white !important;
+    }
+    
+    /* Ensure splash screen is properly removed */
+    .splash-screen-container {
+      pointer-events: none;
+    }
+    
+    /* Force remove any stuck splash elements */
+    body.pwa-mode .splash-screen-container {
+      display: none !important;
+    }
+  }
+
+  /* Hide desktop header in PWA for cleaner app experience */
+  .pwa-mode header {
+    display: none !important;
+  }
+
+  /* Clean PWA Navigation - Matching Screenshot */
+  .mobile-nav {
+    height: 80px;
+  }
+
+  .mobile-nav-item {
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    transition: transform 0.1s ease-out;
+  }
+
+  /* Simple tap feedback */
+  .mobile-nav-item:active {
+    transform: scale(0.95);
+  }
+
+  /* Mobile hero section - app style */
+  .pwa-mode .hero-section {
+    padding: 1.5rem var(--mobile-padding);
+    text-align: center;
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    color: white;
+    border-radius: 0;
+  }
+
+  /* Mobile navigation - bottom tab bar with safe area */
+  .mobile-nav {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .mobile-nav-item {
+    color: #6b7280;
+    text-decoration: none;
+    transition: all 0.15s ease; /* Faster transitions for instant feel */
+    flex: 1;
+    text-align: center;
+    max-width: 80px;
+    /* Disable tap delay for instant response */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .mobile-nav-item:hover {
+    color: #2563eb;
+    transform: translateY(-1px);
+  }
+
+  .mobile-nav-item:active {
+    transform: scale(0.95);
+    transition: transform 0.05s ease;
+  }
+
+  /* Active state for current page */
+  .mobile-nav-item.active {
+    color: #2563eb;
+  }
+
+  /* Perfect iOS PWA experience */
+  @media (display-mode: standalone) {
+    /* iOS safe areas and native app feel */
+    html, body {
+      height: 100vh;
+      height: -webkit-fill-available;
+      background: white !important;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
+      user-select: none;
+      overscroll-behavior: none;
+    }
+
+    #root {
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      background: white;
+      position: relative;
+    }
+
+    /* iOS native scrolling */
+    .scrollable-area {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    /* Instant touch feedback */
+    button, .clickable {
+      -webkit-tap-highlight-color: rgba(37, 99, 235, 0.1);
+      transition: transform 0.1s ease;
+    }
+
+    button:active, .clickable:active {
+      transform: scale(0.98);
+    }
+
+    /* Preserve your beautiful blue theme */
+    .mobile-nav-item.active {
+      color: #2563eb !important;
+    }
+
+    .bg-blue-600 {
+      background-color: #2563eb !important;
+    }
+
+    /* PWA padding for bottom navigation */
+    body {
+      padding-bottom: env(safe-area-inset-bottom, 20px) !important;
+      padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    /* Smooth navigation transitions */
+    .mobile-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  /* iOS Safari specific fixes - only in PWA mode */
+  @media (display-mode: standalone) {
+    @supports (-webkit-touch-callout: none) {
+      /* Prevent iOS white screen by fixing viewport */
+      html, body {
+        position: relative;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        background: white;
+      }
+      
+      #root {
+        position: relative;
+        min-height: 100vh;
+        width: 100%;
+        overflow: visible;
+        background: white;
+      }
+    }
+  }
+  
+  /* Force immediate rendering on iOS */
+  @media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .fixed, .absolute {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+
+  /* Add bottom padding to body in PWA mode for navigation */
+  .pwa-mode {
+    padding-bottom: 80px;
+  }
+
+  .pwa-mode .hero-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .pwa-mode .hero-description {
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  /* iOS PWA safe area padding */
+  .pt-safe-top {
+    padding-top: env(safe-area-inset-top, 20px);
+  }
+  
+  .pb-safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+  
+  /* Utility for pages with bottom navigation - ensures content doesn't hide behind nav */
+  .with-bottom-nav {
+    padding-bottom: calc(80px + env(safe-area-inset-bottom, 20px));
+  }
+  
+  /* Fixed bottom navigation with safe area support */
+  .bottom-nav-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999999;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Clean search section for mobile */
+  .pwa-mode .search-section {
+    padding: var(--mobile-padding);
+    background: white;
+    margin: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  /* Fix search input text color for PWA */
+  .pwa-mode input[type="text"],
+  .pwa-mode input::placeholder,
+  .pwa-mode textarea,
+  .pwa-mode .search-input {
+    color: #1f2937 !important;
+  }
+
+  .pwa-mode input::placeholder {
+    color: #6b7280 !important;
+  }
+
+  /* Hide unnecessary desktop elements */
+  .pwa-mode .desktop-only,
+  .pwa-mode .footer {
+    display: none !important;
+  }
+
+  /* Mobile property cards */
+  .pwa-mode .property-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Mobile-optimized containers */
+  .pwa-mode .container {
+    padding-left: var(--mobile-padding);
+    padding-right: var(--mobile-padding);
+    max-width: 100%;
+  }
+
+  /* Hide scrollbar for property slider */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Modal centering fix for Property Type Modal */
+[data-radix-dialog-content] {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 50 !important;
+}
+
+/* Playful Loading Animation Styles */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes loading-bar {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out;
+}
+
+.animate-loading-bar {
+  animation: loading-bar 8s ease-in-out infinite;
+}
+
+.animation-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-700 {
+  animation-delay: 0.7s;
+}
+
+/* Ultra-smooth scrolling for all elements */
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+}
+
+/* Enhanced momentum scrolling for all elements */
+* {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Maximum fluidity for mobile touch devices */
+body, html, #root {
+  overscroll-behavior: none;
+  scroll-padding-top: 0px;
+  -webkit-overflow-scrolling: touch;
+  /* Ultra-smooth touch scrolling */
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
+
+/* Super optimized scroll containers */
+.scroll-container {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  will-change: scroll-position;
+  transform: translateZ(0);
+  /* Enhanced touch responsiveness */
+  touch-action: pan-y;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* AI Chat Button - Always Visible and Sticky */
+[data-testid="chat-toggle-button"] {
+  position: fixed !important;
+  z-index: 999999 !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  transform: translateZ(0) !important;
+  will-change: transform, opacity !important;
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure AI button container is never hidden */
+[data-testid="chat-toggle-button"]:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hide scrollbar for horizontal scroll */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

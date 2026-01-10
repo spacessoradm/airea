@@ -1,0 +1,34 @@
+Station Code,Station Name,Interchanges/Connections,District/City,State/Territory,Latitude,Longitude
+KA16,Tanjung Malim,KTM ETS,Muallim,Perak,3.684686,101.518701
+KA15,Kuala Kubu Bharu,KTM ETS,Hulu Selangor,Selangor,3.560932,101.658546
+KA14,Rasa,,Hulu Selangor,Selangor,3.500301,101.634187
+KA13,Batang Kali,KTM ETS,Hulu Selangor,Selangor,3.468399,101.63788
+KA12,Serendah,,Hulu Selangor,Selangor,3.363928,101.6028641
+KA11,Rawang,KTM ETS,Gombak,Selangor,3.3191923,101.5752636
+KA10,Kuang,,Gombak,Selangor,3.258265,101.554806
+KA09,Sungai Buloh,12 Putrajaya Line  KTM ETS,Petaling Jaya,Selangor,3.20933,101.5613392
+KA08,Kepong Sentral,12 Putrajaya Line (Sri Damansara Timur)  KTM ETS,Petaling Jaya,Selangor,3.2086304,101.6284401
+KA07,Kepong,,Kuala Lumpur,Federal Territories,3.213966,101.6355931
+KA05,Segambut,,Kuala Lumpur,Federal Territories,3.1864319,101.664163
+KA04,Putra,1 Batu Caves-Pulau Sebang Line  (PWTC) 3 Ampang Line 4 Sri Petaling Line,Kuala Lumpur,Federal Territories,3.16532,101.69109
+KA03,Bank Negara,1 Batu Caves-Pulau Sebang Line  (Bandaraya) 3 Ampang Line 4 Sri Petaling Line,Kuala Lumpur,Federal Territories,3.1548053,101.6931397
+KA02,Kuala Lumpur,1 Batu Caves-Pulau Sebang Line 5 Kelana Jaya Line (Pasar Seni) 9 Kajang Line (Pasar Seni)  KTM ETS,Kuala Lumpur,Federal Territories,3.0762302,101.710997
+KA01,KL Sentral,1 Batu Caves-Pulau Sebang Line 5 Kelana Jaya Line 6 KLIA Ekspres 7 KLIA Transit 8 KL Monorail[Note 1] 9 Kajang Line (Muzium Negara) 10 KL Sentral-Terminal Skypark Line  KTM ETS,Kuala Lumpur,Federal Territories,3.13417,101.68611
+KD01,Abdullah Hukum,5 Kelana Jaya Line 1 Batu Caves-Pulau Sebang Line (Mid Valley),Kuala Lumpur,Federal Territories,3.1186831,101.672874
+KD02,Angkasapuri,,Kuala Lumpur,Federal Territories,3.11306,101.67333
+KD03,Pantai Dalam,13 Circle Line',Kuala Lumpur,Federal Territories,3.111359,101.6622439
+KD04,Petaling,,Petaling Jaya,Selangor,3.1846237,101.5359674
+KD05,Jalan Templer,,Petaling Jaya,Selangor,3.0929263,101.6473791
+KD06,Kampung Dato’ Harun,,Petaling Jaya,Selangor,3.0844767,101.6322897
+KD07,Seri Setia,,Petaling Jaya,Selangor,3.0844604,101.6218843
+KD08,Setia Jaya,B1 BRT Sunway Line (Sunway-Setia Jaya),Petaling Jaya,Selangor,3.0831821,101.6114147
+KD09,Subang Jaya,5 Kelana Jaya Line 10 KL Sentral-Terminal Skypark Line,Subang Jaya,Selangor,3.08367,101.58687
+KD10,Batu Tiga,,Shah Alam,Selangor,3.0758449,101.5597796
+KD11,Shah Alam,,Shah Alam,Selangor,3.073281,101.518461
+KD12,Padang Jawa,,Shah Alam,Selangor,3.0524619,101.4927253
+KD13,Bukit Badak,,Klang,Selangor,3.03588,101.47023
+KD14,Klang,,Klang,Selangor,3.044917,101.4455621
+KD15,Teluk Pulai,,Klang,Selangor,3.0408656,101.4321537
+KD16,Teluk Gadong,,Klang,Selangor,3.0339078,101.424934
+KD17,Kampung Raja Uda,,Klang,Selangor,3.0201624,101.4102508
+KD18,Jalan Kastam,,Klang,Selangor,3.0130445,101.4026161

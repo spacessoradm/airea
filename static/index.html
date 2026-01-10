@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airea - AI Property Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .search-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .select2-container {
+            width: 100% !important;
+        }
+        
+        .select2-selection {
+            border: 2px solid #e1e5e9 !important;
+            border-radius: 8px !important;
+            padding: 12px !important;
+            font-size: 16px !important;
+            min-height: 50px !important;
+        }
+        
+        .select2-selection:focus {
+            border-color: #007bff !important;
+            outline: none !important;
+        }
+        
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196f3;
+        }
+        
+        .instructions h3 {
+            margin: 0 0 10px 0;
+            color: #1976d2;
+        }
+        
+        .instructions ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 5px;
+        }
+        
+        .results-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: none;
+        }
+        
+        .results-container h3 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+        }
+        
+        .results-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .results-list li {
+            padding: 12px;
+            border: 1px solid #e1e5e9;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+        }
+        
+        .property-title {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        
+        .property-type {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: capitalize;
+        }
+        
+        .property-distance {
+            color: #28a745;
+            font-size: 0.85em;
+            float: right;
+        }
+        
+        .loading {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .no-results {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏠 Airea</h1>
+        <p>AI-Powered Property Search for Malaysia</p>
+    </div>
+
+    <div class="search-container">
+        <div class="instructions">
+            <h3>How to Search:</h3>
+            <ul>
+                <li><strong>Autocomplete:</strong> Type property names like "Mutiara" for fuzzy suggestions</li>
+                <li><strong>AI Search:</strong> Press Enter for complex queries like "condo near mrt surian"</li>
+            </ul>
+        </div>
+        
+        <div class="search-box">
+            <select id="property-search" style="width: 100%">
+                <option></option>
+            </select>
+        </div>
+    </div>
+
+    <div id="results-container" class="results-container">
+        <h3>Search Results</h3>
+        <ul id="results-list" class="results-list"></ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize Select2 with autocomplete functionality
+            $('#property-search').select2({
+                placeholder: 'Search properties... (e.g., "Mutiara" or "condo near mrt surian")',
+                allowClear: true,
+                ajax: {
+                    url: '/autocomplete',
+                    dataType: 'json',
+                    delay: 300,
+                    data: function (params) {
+                        return {
+                            q: params.term
+                        };
+                    },
+                    processResults: function (data) {
+                        return {
+                            results: data.map(function(item) {
+                                return {
+                                    id: item.title,
+                                    text: item.title + ' (' + item.type + ')',
+                                    title: item.title,
+                                    type: item.type,
+                                    score: item.score
+                                };
+                            })
+                        };
+                    },
+                    cache: true
+                },
+                minimumInputLength: 2,
+                templateResult: function(data) {
+                    if (data.loading) return data.text;
+                    
+                    var $result = $(
+                        '<div class="select2-result-property">' +
+                            '<div class="property-title">' + data.title + '</div>' +
+                            '<div class="property-type">Type: ' + data.type + '</div>' +
+                        '</div>'
+                    );
+                    return $result;
+                },
+                templateSelection: function(data) {
+                    return data.title || data.text;
+                }
+            });
+
+            // Handle Enter keypress for AI search
+            $('#property-search').on('select2:open', function() {
+                $('.select2-search__field').on('keypress', function(e) {
+                    if (e.which === 13) { // Enter key
+                        e.preventDefault();
+                        var query = $(this).val();
+                        if (query && query.length >= 3) {
+                            performAISearch(query);
+                            $('#property-search').select2('close');
+                        }
+                    }
+                });
+            });
+
+            // Function to perform AI search
+            function performAISearch(query) {
+                console.log('Performing AI search for:', query);
+                
+                // Show results container and loading state
+                $('#results-container').show();
+                $('#results-list').html('<li class="loading">Searching...</li>');
+
+                $.ajax({
+                    url: '/search',
+                    method: 'GET',
+                    data: { q: query },
+                    dataType: 'json',
+                    success: function(data) {
+                        console.log('AI search results:', data);
+                        displayResults(data, query);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Search error:', error);
+                        $('#results-list').html('<li class="no-results">Search failed. Please try again.</li>');
+                    }
+                });
+            }
+
+            // Function to display search results
+            function displayResults(results, query) {
+                var $resultsList = $('#results-list');
+                $resultsList.empty();
+
+                if (!results || results.length === 0) {
+                    $resultsList.html('<li class="no-results">No properties found for "' + query + '"</li>');
+                    return;
+                }
+
+                results.forEach(function(property) {
+                    var distanceText = '';
+                    if (property.distance_meters !== null && property.distance_meters !== undefined) {
+                        if (property.distance_meters < 1000) {
+                            distanceText = '<span class="property-distance">' + Math.round(property.distance_meters) + 'm away</span>';
+                        } else {
+                            distanceText = '<span class="property-distance">' + (property.distance_meters / 1000).toFixed(1) + 'km away</span>';
+                        }
+                    }
+
+                    var $listItem = $(
+                        '<li>' +
+                            '<div class="property-title">' + property.title + '</div>' +
+                            '<div class="property-type">Type: ' + property.type + '</div>' +
+                            distanceText +
+                        '</li>'
+                    );
+                    
+                    $resultsList.append($listItem);
+                });
+            }
+
+            // Handle selection from autocomplete dropdown
+            $('#property-search').on('select2:select', function(e) {
+                var data = e.params.data;
+                console.log('Selected property:', data);
+                
+                // Optionally perform a search when a property is selected
+                // performAISearch(data.title);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+1️⃣ Basic Search Accuracy (Exact Match)
+These test cases ensure your search engine returns correct matches when the query matches data exactly.
+Test ID	Query	Expected Behavior	Example Expected Result
+B-001	Damansara	Returns all Damansara properties	All 5 listings tagged Damansara
+B-002	Kepong	Returns all Kepong properties	All 4 listings tagged Kepong
+B-003	Mont Kiara	Returns all Mont Kiara properties	All 6 listings tagged Mont Kiara
+2️⃣ Fuzzy Match / Typo Handling
+Checks AI tolerance for typos, spacing, and abbreviations.
+Test ID	Query	Expected Behavior
+F-001	Damansra	Still returns Damansara listings
+F-002	Kpong	Still returns Kepong listings
+F-003	Mt Kiara	Still returns Mont Kiara listings
+F-004	montkiara	Case-insensitive match
+3️⃣ Location + Filter Combination
+Tests if filters apply correctly (e.g., price, rental/buy, property type).
+Test ID	Query	Filter	Expected Behavior
+LF-001	Damansara	Price ≤ RM 1,500	Only Damansara rentals under RM 1.5k
+LF-002	Kepong	For Sale, Price ≥ RM 500k	Kepong sale properties above RM 500k
+LF-003	Mont Kiara	Condo, Price ≤ RM 3,000	Mont Kiara condos within RM 3k rent
+4️⃣ Nearby / Radius-based Search
+Tests if “X minutes away from Y” works (your Sunway Giza feature).
+Test ID	Query	Expected Behavior
+R-001	5 mins from Sunway Giza	Returns properties in that radius
+R-002	10 mins from 1 Utama	Returns Damansara & possibly Mont Kiara depending on road network
+R-003	15 mins from Kepong Baru MRT	Returns Kepong + border listings
+5️⃣ Semantic Understanding
+Tests AI’s ability to infer meaning without exact location keywords.
+Test ID	Query	Expected Behavior
+S-001	Luxury condos in expat area	Returns Mont Kiara listings
+S-002	Affordable terrace near MRT	Likely returns Kepong terrace houses
+S-003	High rental yield area	Returns Damansara & Kepong hotspots
+6️⃣ No Result & Error Handling
+Tests graceful handling of missing matches.
+Test ID	Query	Expected Behavior
+E-001	Klang	Returns “No results found” message, suggests nearby areas
+E-002	20 mins from Penang Airport	Same as above
+E-003	qwertyuiop	Detect invalid query and ask clarification
+7️⃣ Performance / Speed
+Query Damansara 1000 times → Response should stay <1 second average
+Combined filter query (Damansara, RM 1k–2k, condo) → <2 seconds average

@@ -1,0 +1,735 @@
+[
+  {
+    "id": 1,
+    "name": "Retail in Petaling Jaya #1",
+    "type": "Commercial",
+    "subtype": "Retail",
+    "location": "Petaling Jaya",
+    "price": 8581,
+    "unit": "RM/month",
+    "features": [
+      "gym",
+      "near MRT",
+      "pool",
+      "covered parking",
+      "air conditioning"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Warehouse in Shah Alam #2",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Shah Alam",
+    "price": 16064,
+    "unit": "RM/month",
+    "features": [
+      "CCTV",
+      "air conditioning",
+      "gym",
+      "security guard",
+      "covered parking"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mall Unit in Kepong #3",
+    "type": "Commercial",
+    "subtype": "Mall Unit",
+    "location": "Kepong",
+    "price": 4156069,
+    "unit": "RM",
+    "features": [
+      "gym",
+      "pool",
+      "CCTV",
+      "security guard",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Condo in Shah Alam #4",
+    "type": "Residential",
+    "subtype": "Condo",
+    "location": "Shah Alam",
+    "price": 821324,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "pet-friendly",
+      "high ceiling",
+      "air conditioning",
+      "pool"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Shop Lot in Puchong #5",
+    "type": "Commercial",
+    "subtype": "Shop Lot",
+    "location": "Puchong",
+    "price": 6080,
+    "unit": "RM/month",
+    "features": [
+      "pool",
+      "security guard",
+      "gym",
+      "CCTV",
+      "high ceiling"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Apartment in Cheras #6",
+    "type": "Residential",
+    "subtype": "Apartment",
+    "location": "Cheras",
+    "price": 989858,
+    "unit": "RM/month",
+    "features": [
+      "security guard",
+      "pet-friendly",
+      "furnished",
+      "near MRT",
+      "loading bay"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Shop Lot in Petaling Jaya #7",
+    "type": "Commercial",
+    "subtype": "Shop Lot",
+    "location": "Petaling Jaya",
+    "price": 1750406,
+    "unit": "RM",
+    "features": [
+      "near MRT",
+      "gym",
+      "24h access",
+      "pool"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Factory in Puchong #8",
+    "type": "Industrial",
+    "subtype": "Factory",
+    "location": "Puchong",
+    "price": 1932617,
+    "unit": "RM",
+    "features": [
+      "security guard",
+      "covered parking",
+      "pool"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Logistics Hub in Mont Kiara #9",
+    "type": "Industrial",
+    "subtype": "Logistics Hub",
+    "location": "Mont Kiara",
+    "price": 6900331,
+    "unit": "RM",
+    "features": [
+      "furnished",
+      "near MRT",
+      "24h access",
+      "pet-friendly",
+      "gym"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Warehouse in Subang Jaya #10",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Subang Jaya",
+    "price": 9116234,
+    "unit": "RM",
+    "features": [
+      "pool",
+      "loading bay",
+      "security guard"
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Factory in Mont Kiara #11",
+    "type": "Industrial",
+    "subtype": "Factory",
+    "location": "Mont Kiara",
+    "price": 2446979,
+    "unit": "RM",
+    "features": [
+      "loading bay",
+      "24h access"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Serviced Residence in Damansara #12",
+    "type": "Residential",
+    "subtype": "Serviced Residence",
+    "location": "Damansara",
+    "price": 2457,
+    "unit": "RM/month",
+    "features": [
+      "gym",
+      "pet-friendly",
+      "pool"
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Bungalow in Shah Alam #13",
+    "type": "Residential",
+    "subtype": "Bungalow",
+    "location": "Shah Alam",
+    "price": 1176301,
+    "unit": "RM",
+    "features": [
+      "covered parking",
+      "furnished",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Co-working Space in Petaling Jaya #14",
+    "type": "Commercial",
+    "subtype": "Co-working Space",
+    "location": "Petaling Jaya",
+    "price": 5747,
+    "unit": "RM/month",
+    "features": [
+      "near MRT",
+      "high ceiling",
+      "24h access"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Bungalow in Cheras #15",
+    "type": "Residential",
+    "subtype": "Bungalow",
+    "location": "Cheras",
+    "price": 1153832,
+    "unit": "RM",
+    "features": [
+      "pet-friendly",
+      "high ceiling",
+      "loading bay",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Apartment in Damansara #16",
+    "type": "Residential",
+    "subtype": "Apartment",
+    "location": "Damansara",
+    "price": 3793,
+    "unit": "RM/month",
+    "features": [
+      "pool",
+      "gym",
+      "high ceiling",
+      "furnished"
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Shop Lot in Puchong #17",
+    "type": "Commercial",
+    "subtype": "Shop Lot",
+    "location": "Puchong",
+    "price": 9599,
+    "unit": "RM/month",
+    "features": [
+      "air conditioning",
+      "pool",
+      "24h access",
+      "high ceiling",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Warehouse in Cheras #18",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Cheras",
+    "price": 3884785,
+    "unit": "RM",
+    "features": [
+      "gym",
+      "near MRT",
+      "security guard",
+      "loading bay",
+      "covered parking"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Mall Unit in Cheras #19",
+    "type": "Commercial",
+    "subtype": "Mall Unit",
+    "location": "Cheras",
+    "price": 11136,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "furnished",
+      "gym",
+      "24h access"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Landed House in Petaling Jaya #20",
+    "type": "Residential",
+    "subtype": "Landed House",
+    "location": "Petaling Jaya",
+    "price": 3829,
+    "unit": "RM/month",
+    "features": [
+      "gym",
+      "security guard",
+      "near MRT",
+      "CCTV",
+      "pool"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Condo in Mont Kiara #21",
+    "type": "Residential",
+    "subtype": "Condo",
+    "location": "Mont Kiara",
+    "price": 890606,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "air conditioning",
+      "furnished",
+      "24h access",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Co-working Space in Damansara #22",
+    "type": "Commercial",
+    "subtype": "Co-working Space",
+    "location": "Damansara",
+    "price": 13839,
+    "unit": "RM/month",
+    "features": [
+      "security guard",
+      "covered parking",
+      "high ceiling"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Factory in Cheras #23",
+    "type": "Industrial",
+    "subtype": "Factory",
+    "location": "Cheras",
+    "price": 8398162,
+    "unit": "RM",
+    "features": [
+      "covered parking",
+      "pet-friendly",
+      "24h access",
+      "air conditioning"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Cold Storage in Petaling Jaya #24",
+    "type": "Industrial",
+    "subtype": "Cold Storage",
+    "location": "Petaling Jaya",
+    "price": 1164563,
+    "unit": "RM",
+    "features": [
+      "loading bay",
+      "high ceiling"
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Serviced Residence in Petaling Jaya #25",
+    "type": "Residential",
+    "subtype": "Serviced Residence",
+    "location": "Petaling Jaya",
+    "price": 1762,
+    "unit": "RM/month",
+    "features": [
+      "gym",
+      "air conditioning"
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Warehouse in Petaling Jaya #26",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Petaling Jaya",
+    "price": 19118,
+    "unit": "RM/month",
+    "features": [
+      "furnished",
+      "24h access",
+      "security guard"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Retail in Mont Kiara #27",
+    "type": "Commercial",
+    "subtype": "Retail",
+    "location": "Mont Kiara",
+    "price": 4911239,
+    "unit": "RM",
+    "features": [
+      "furnished",
+      "gym",
+      "near MRT",
+      "24h access"
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Condo in Cheras #28",
+    "type": "Residential",
+    "subtype": "Condo",
+    "location": "Cheras",
+    "price": 3913,
+    "unit": "RM/month",
+    "features": [
+      "furnished",
+      "gym"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Co-working Space in Puchong #29",
+    "type": "Commercial",
+    "subtype": "Co-working Space",
+    "location": "Puchong",
+    "price": 1918217,
+    "unit": "RM",
+    "features": [
+      "security guard",
+      "24h access",
+      "CCTV",
+      "pet-friendly",
+      "gym"
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Warehouse in Subang Jaya #30",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Subang Jaya",
+    "price": 12207,
+    "unit": "RM/month",
+    "features": [
+      "furnished",
+      "24h access"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Factory in Cheras #31",
+    "type": "Industrial",
+    "subtype": "Factory",
+    "location": "Cheras",
+    "price": 33407,
+    "unit": "RM/month",
+    "features": [
+      "pet-friendly",
+      "pool",
+      "furnished"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Condo in Puchong #32",
+    "type": "Residential",
+    "subtype": "Condo",
+    "location": "Puchong",
+    "price": 1143380,
+    "unit": "RM",
+    "features": [
+      "near MRT",
+      "furnished",
+      "security guard",
+      "pool",
+      "air conditioning"
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Bungalow in Damansara #33",
+    "type": "Residential",
+    "subtype": "Bungalow",
+    "location": "Damansara",
+    "price": 2297,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "loading bay",
+      "high ceiling",
+      "gym"
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Logistics Hub in Petaling Jaya #34",
+    "type": "Industrial",
+    "subtype": "Logistics Hub",
+    "location": "Petaling Jaya",
+    "price": 9547,
+    "unit": "RM/month",
+    "features": [
+      "loading bay",
+      "security guard"
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Warehouse in Mont Kiara #35",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Mont Kiara",
+    "price": 44753,
+    "unit": "RM/month",
+    "features": [
+      "loading bay",
+      "furnished",
+      "security guard"
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Condo in Mont Kiara #36",
+    "type": "Residential",
+    "subtype": "Condo",
+    "location": "Mont Kiara",
+    "price": 2543,
+    "unit": "RM/month",
+    "features": [
+      "pet-friendly",
+      "CCTV",
+      "near MRT",
+      "covered parking"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Serviced Residence in Kepong #37",
+    "type": "Residential",
+    "subtype": "Serviced Residence",
+    "location": "Kepong",
+    "price": 5435,
+    "unit": "RM/month",
+    "features": [
+      "24h access",
+      "CCTV",
+      "air conditioning",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Logistics Hub in Petaling Jaya #38",
+    "type": "Industrial",
+    "subtype": "Logistics Hub",
+    "location": "Petaling Jaya",
+    "price": 9561456,
+    "unit": "RM",
+    "features": [
+      "loading bay",
+      "air conditioning",
+      "CCTV",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Retail in Mont Kiara #39",
+    "type": "Commercial",
+    "subtype": "Retail",
+    "location": "Mont Kiara",
+    "price": 573503,
+    "unit": "RM/month",
+    "features": [
+      "loading bay",
+      "pet-friendly",
+      "air conditioning",
+      "near MRT",
+      "high ceiling"
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Logistics Hub in Cheras #40",
+    "type": "Industrial",
+    "subtype": "Logistics Hub",
+    "location": "Cheras",
+    "price": 5563137,
+    "unit": "RM",
+    "features": [
+      "high ceiling",
+      "loading bay",
+      "CCTV"
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Mall Unit in Kepong #41",
+    "type": "Commercial",
+    "subtype": "Mall Unit",
+    "location": "Kepong",
+    "price": 6891,
+    "unit": "RM/month",
+    "features": [
+      "air conditioning",
+      "high ceiling",
+      "CCTV"
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Warehouse in Petaling Jaya #42",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Petaling Jaya",
+    "price": 5360205,
+    "unit": "RM",
+    "features": [
+      "pool",
+      "furnished"
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Landed House in Kepong #43",
+    "type": "Residential",
+    "subtype": "Landed House",
+    "location": "Kepong",
+    "price": 684763,
+    "unit": "RM/month",
+    "features": [
+      "loading bay",
+      "pet-friendly",
+      "air conditioning"
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Factory in Petaling Jaya #44",
+    "type": "Industrial",
+    "subtype": "Factory",
+    "location": "Petaling Jaya",
+    "price": 34588,
+    "unit": "RM/month",
+    "features": [
+      "CCTV",
+      "covered parking",
+      "24h access"
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Shop Lot in Damansara #45",
+    "type": "Commercial",
+    "subtype": "Shop Lot",
+    "location": "Damansara",
+    "price": 760224,
+    "unit": "RM/month",
+    "features": [
+      "gym",
+      "security guard"
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Apartment in Puchong #46",
+    "type": "Residential",
+    "subtype": "Apartment",
+    "location": "Puchong",
+    "price": 4782,
+    "unit": "RM/month",
+    "features": [
+      "CCTV",
+      "security guard",
+      "furnished",
+      "gym",
+      "pet-friendly"
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Warehouse in Puchong #47",
+    "type": "Industrial",
+    "subtype": "Warehouse",
+    "location": "Puchong",
+    "price": 43471,
+    "unit": "RM/month",
+    "features": [
+      "24h access",
+      "near MRT"
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Bungalow in Kepong #48",
+    "type": "Residential",
+    "subtype": "Bungalow",
+    "location": "Kepong",
+    "price": 1016,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "furnished",
+      "security guard",
+      "air conditioning",
+      "24h access"
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Cold Storage in Kepong #49",
+    "type": "Industrial",
+    "subtype": "Cold Storage",
+    "location": "Kepong",
+    "price": 8082047,
+    "unit": "RM",
+    "features": [
+      "pool",
+      "near MRT",
+      "high ceiling"
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Landed House in Cheras #50",
+    "type": "Residential",
+    "subtype": "Landed House",
+    "location": "Cheras",
+    "price": 2165,
+    "unit": "RM/month",
+    "features": [
+      "covered parking",
+      "high ceiling",
+      "furnished"
+    ]
+  }
+]

@@ -1,0 +1,212 @@
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] After property type filter (industrial, warehouse, factory, cluster-factory, semi-d-factory, detached-factory, terrace-factory): – 0 – "from" – 10 (SearchResults.tsx, line 155)
+[Log] ⚠️ WARNING: Property type filter resulted in 0 properties! This might indicate a conflicting filter scenario. (SearchResults.tsx, line 157)
+[Log] Skipping location filter for AI search refinement - preserving AI location context (SearchResults.tsx, line 215)
+[Log] Final filtered count: – 0 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 0, …}Object
+[Log] Pagination Debug: – {totalProperties: 0, totalPages: 0, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 0, totalPages: 0, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Log] AI Search Result Filters: – {searchType: "general", listingType: "rent", location: {area: "Near KTM stations", maxDistance: 12, transportation: "walking"}} (SearchResults.tsx, line 310)
+[Log] Is conflict resolution search: – false (SearchResults.tsx, line 311)
+[Log] Setting new filters: – {searchType: "general", listingType: "rent", location: {area: "Near KTM stations", maxDistance: 12, transportation: "walking"}} (SearchResults.tsx, line 312)
+[Log] 🔧 Setting AI search results: – 10 – "properties" (SearchResults.tsx, line 317)
+[Log] 🔧 First few properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}, {id: "a17f42e4-05fb-45cb-8b75-11116ce993ba", title: "Taman Desa House - Mid Valley", propertyType: "house"}] (3) (SearchResults.tsx, line 318)
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] After property type filter (industrial, warehouse, factory, cluster-factory, semi-d-factory, detached-factory, terrace-factory): – 0 – "from" – 10 (SearchResults.tsx, line 155)
+[Log] ⚠️ WARNING: Property type filter resulted in 0 properties! This might indicate a conflicting filter scenario. (SearchResults.tsx, line 157)
+[Log] Skipping location filter for AI search refinement - preserving AI location context (SearchResults.tsx, line 215)
+[Log] Final filtered count: – 0 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 0, …}Object
+[Log] Pagination Debug: – {totalProperties: 0, totalPages: 0, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 0, totalPages: 0, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 10 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 10, …}Object
+[Log] Pagination Debug: – {totalProperties: 10, totalPages: 1, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 10, totalPages: 1, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1515263487990-61b07816b17c, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1560448204-444dcb171d21, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1571055107734-7de6b1988917, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1560449752-3fd4bdbd6b3d, line 0)
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 10 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 10, …}Object
+[Log] Pagination Debug: – {totalProperties: 10, totalPages: 1, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 10, totalPages: 1, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Log] 🟦 BUTTON CLICKED - Apply Filters (QuickFilters.tsx, line 1344)
+[Log] 🟦 Local Filters: – {searchType: "general", listingType: "rent", location: "Near KTM stations", …} (QuickFilters.tsx, line 1345)
+{searchType: "general", listingType: "rent", location: "Near KTM stations", propertyType: Array}Object
+[Log] 🟦 onApplyFilters prop exists: – true (QuickFilters.tsx, line 1346)
+[Log] 🟦 QuickFilters handleApplyFilters called with localFilters: – {searchType: "general", listingType: "rent", location: "Near KTM stations", …} (QuickFilters.tsx, line 111)
+{searchType: "general", listingType: "rent", location: "Near KTM stations", propertyType: Array}Object
+[Log] 🟦 Calling onApplyFilters prop function (QuickFilters.tsx, line 113)
+[Log] 🔧 handleApplyFilters called with: – {searchType: "general", listingType: "rent", location: "Near KTM stations", …} (SearchResults.tsx, line 348)
+{searchType: "general", listingType: "rent", location: "Near KTM stations", propertyType: Array}Object
+[Log] 🔧 Current search state: – {searchQuery: "near KTM", isAiSearchActive: true, filters: {searchType: "general", listingType: "rent", location: {area: "Near KTM stations", maxDistance: 12, transportation: "walking"}}} (SearchResults.tsx, line 349)
+[Log] 🚨 DEBUG: Apply filters function triggered! (SearchResults.tsx, line 351)
+[Log] 🔧 Conflict detection debug: – {isAiSearchActive: true, hasPropertyTypeFilter: true, propertyTypeValues: Array, …} (SearchResults.tsx, line 355)
+{isAiSearchActive: true, hasPropertyTypeFilter: true, propertyTypeValues: Array, searchQueryValue: "near KTM", hasNearOrCloseTo: true, …}Object
+[Error] 🚨 INDUSTRIAL FILTER DETECTED - DEBUG TRACE
+	handleApplyFilters (SearchResults.tsx:364)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Search Query: – "near KTM"
+	handleApplyFilters (SearchResults.tsx:365)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Is AI Active: – true
+	handleApplyFilters (SearchResults.tsx:366)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Should trigger conflict: – true
+	handleApplyFilters (SearchResults.tsx:367)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Log] 🔄 Detected conflicting property type change - performing new AI search (SearchResults.tsx, line 370)
+[Log] 🔍 Transport match result: – ["near KTM", "near", "KTM"] (3) (SearchResults.tsx, line 372)
+[Log] 🔍 Performing new AI search with query: – "near KTM" (SearchResults.tsx, line 384)
+[Log] 🟦 handleApplyFilters completed successfully (QuickFilters.tsx, line 1349)
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 10 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 10, …}Object
+[Log] Pagination Debug: – {totalProperties: 10, totalPages: 1, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 10, totalPages: 1, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Log] AI Search Result Filters: – {searchType: "general", listingType: "rent", location: {area: "Near KTM stations", maxDistance: 12, transportation: "walking"}} (SearchResults.tsx, line 310)
+[Log] Is conflict resolution search: – true (SearchResults.tsx, line 311)
+[Log] Setting new filters: – {searchType: "general", listingType: "rent", location: "Near KTM stations", …} (SearchResults.tsx, line 312)
+{searchType: "general", listingType: "rent", location: "Near KTM stations", propertyType: Array}Object
+[Log] 🔧 Setting AI search results: – 10 – "properties" (SearchResults.tsx, line 317)
+[Log] 🔧 First few properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}, {id: "a17f42e4-05fb-45cb-8b75-11116ce993ba", title: "Taman Desa House - Mid Valley", propertyType: "house"}] (3) (SearchResults.tsx, line 318)
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 10 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 10, …}Object
+[Log] Pagination Debug: – {totalProperties: 10, totalPages: 1, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 10, totalPages: 1, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object
+[Log] 🔍 Property selection debug: – {isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 223)
+{isAiSearchActive: true, aiSearchResultsExists: true, aiSearchResultsCount: 10, searchQuery: "near KTM", hasSearched: true, …}Object
+[Log] 🔍 Raw properties before filtering: – 10 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – [{id: "c847ec80-331c-4f40-ad06-b6859b4a1ad5", title: "Bungalow House - Mid Valley", propertyType: "house"}, {id: "6cfd9e3d-40cd-4c9c-b8f8-6e61d953184e", title: "KL Gateway Premium Suites - Sentul", propertyType: "condominium"}] (2) (SearchResults.tsx, line 233)
+[Log] ApplyQuickFilters Debug: – {originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", …} (SearchResults.tsx, line 133)
+{originalCount: 10, isAiSearchActive: true, listingTypeFilter: "rent", bedroomsFilter: undefined, maxPriceFilter: undefined, …}Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 10 (SearchResults.tsx, line 148)
+[Log] After property type filter (industrial, warehouse, factory, cluster-factory, semi-d-factory, detached-factory, terrace-factory): – 0 – "from" – 10 (SearchResults.tsx, line 155)
+[Log] ⚠️ WARNING: Property type filter resulted in 0 properties! This might indicate a conflicting filter scenario. (SearchResults.tsx, line 157)
+[Log] Skipping location filter for AI search refinement - preserving AI location context (SearchResults.tsx, line 215)
+[Log] Final filtered count: – 0 (SearchResults.tsx, line 220)
+[Log] Search Debug: – {searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, …} (SearchResults.tsx, line 240)
+{searchQuery: "near KTM", isAiSearchActive: true, aiSearchResultsCount: 10, regularPropertiesCount: 0, allPropertiesCount: 0, …}Object
+[Log] Pagination Debug: – {totalProperties: 0, totalPages: 0, currentPage: 1, …} (SearchResults.tsx, line 255)
+{totalProperties: 0, totalPages: 0, currentPage: 1, ITEMS_PER_PAGE: 20, startIndex: 0, …}Object

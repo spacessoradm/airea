@@ -1,0 +1,43 @@
+🔴 CRITICAL PRIORITY (Must Fix Before Launch)
+User Portal (Web & PWA)
+1.	Fix iOS Bottom Navigation - Bottom nav not sticking to viewport on iOS devices; needs CSS safe-area support and viewport meta fixes
+2.	Splash Screen Gating - Ensure splash screen only appears on /simple PWA route, not on regular website
+3.	PWA Installation & Offline - Stabilize service worker, manifest scope, install prompts, and offline caching strategy
+4.	Property Search Validation - Test all filters (buy/rent toggles, sorting, proximity search) against live data; add URL query params for shareable links
+5.	Redirect to Whatsapp through listing cards – Ensure the users can direct to agents’ Whatsapp.
+6.	Navigation works for every buttons – To ensure all pages navigation is displayed successfully on live
+
+Agent Portal (Web)
+5.	To confirm UAT mode is removed & Implement Real Auth - Remove development bypass, implement proper Replit/Passport authentication, protect all endpoints 
+6.	Property CRUD Regression Testing - Thoroughly test all property create/update/delete operations after recent schema fixes
+7.	Null Value Handling - Add defensive handling for null values across all agent forms (propertyCondition, furnishedCondition, etc.)
+8.	Analytics Dashboard Accuracy - Ensure metrics are calculated correctly, charts handle missing data gracefully
+9.	Navigation works for every buttons – To ensure all pages navigation is displayed successfully on live
+
+Infrastructure
+9.	Production Database Setup - Provision Neon PostgreSQL production instance with migration plan
+10.	Environment & Secrets Management - Configure production .env files for all API keys (Google Maps, OpenAI, OpenRouteService)
+11.	End-to-End Testing - Test complete user flows: search→detail→contact, agent listing lifecycle, PWA install, authentication
+
+🟠 HIGH PRIORITY (Important for Launch)
+User Portal
+12.	AI Search Performance - Optimize AI search carousel and manual scroll interactions for low-end devices
+13.	Personalized Home Page - Implement persistent recent searches and welcome messages via API/storage
+14.	SEO & Accessibility - Add proper titles, meta descriptions, Open Graph tags, screen reader labels, keyboard navigation
+Infrastructure
+18.	CI/CD Pipeline - Set up automated testing, Vite builds, Drizzle migrations, and staging deployment
+19.	Monitoring & Logging - Implement error tracking, uptime monitoring, and API usage analytics
+20.	Rate Limiting & API Protection - Add rate limits for AI/geocoding APIs with failover when quotas exhausted
+ 
+🟡 MEDIUM PRIORITY (Nice to Have)
+User Portal
+21.	Skeleton Loaders - Add loading states for long AI responses and data fetching
+22.	Query Optimization - Review React Query cache keys and implement infinite scroll for search results
+23.	Image Optimization - Compress property images and watermarks for faster loading
+Agent Portal
+24.	Draft Autosave - Implement auto-save for property drafts to prevent data loss
+25.	Enhanced Analytics - Add charts for property views over time, lead conversion rates
+26.	Transport Proximity Scoring - Ensure amenity scoring and transport distance calculations are consistent
+Infrastructure
+27.	Performance Monitoring - Bundle size analysis, code splitting, Lighthouse audits
+28.	Server-side Caching - Validate geocoding/travel-time cache eviction windows and add metrics

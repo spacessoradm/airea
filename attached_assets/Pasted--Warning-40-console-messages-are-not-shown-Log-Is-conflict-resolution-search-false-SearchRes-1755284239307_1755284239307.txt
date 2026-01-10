@@ -1,0 +1,209 @@
+[Warning] 40 console messages are not shown.
+[Log] Is conflict resolution search: – false (SearchResults.tsx, line 311)
+[Log] Setting new filters: – Object (SearchResults.tsx, line 312)
+Object
+[Log] 🔧 Setting AI search results: – 11 – "properties" (SearchResults.tsx, line 317)
+[Log] 🔧 First few properties: – Array (3) (SearchResults.tsx, line 318)
+Array (3)
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 3 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] After listing type filter: – 3 (SearchResults.tsx, line 148)
+[Log] Final filtered count: – 3 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 11 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 11 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 11 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1560449752-3fd4bdbd6b3d, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1560448204-444dcb171d21, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1571055107734-7de6b1988917, line 0)
+[Error] Failed to load resource: the server responded with a status of 404 () (photo-1515263487990-61b07816b17c, line 0)
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 11 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 11 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 11 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object
+[Log] 🟦 BUTTON CLICKED - Apply Filters (QuickFilters.tsx, line 1344)
+[Log] 🟦 Local Filters: – Object (QuickFilters.tsx, line 1345)
+Object
+[Log] 🟦 onApplyFilters prop exists: – true (QuickFilters.tsx, line 1346)
+[Log] 🟦 QuickFilters handleApplyFilters called with localFilters: – Object (QuickFilters.tsx, line 111)
+Object
+[Log] 🟦 Calling onApplyFilters prop function (QuickFilters.tsx, line 113)
+[Log] 🔧 handleApplyFilters called with: – Object (SearchResults.tsx, line 348)
+Object
+[Log] 🔧 Current search state: – Object (SearchResults.tsx, line 349)
+Object
+[Log] 🚨 DEBUG: Apply filters function triggered! (SearchResults.tsx, line 351)
+[Log] 🔧 Conflict detection debug: – Object (SearchResults.tsx, line 355)
+Object
+[Error] 🚨 INDUSTRIAL FILTER DETECTED - DEBUG TRACE
+	handleApplyFilters (SearchResults.tsx:364)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Search Query: – "near MRT"
+	handleApplyFilters (SearchResults.tsx:365)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Is AI Active: – true
+	handleApplyFilters (SearchResults.tsx:366)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Error] Should trigger conflict: – true
+	handleApplyFilters (SearchResults.tsx:367)
+	handleApplyFilters (QuickFilters.tsx:114)
+	onClick (QuickFilters.tsx:1348)
+	callCallback2 (chunk-WERSD76P.js:3674)
+	dispatchEvent
+	invokeGuardedCallbackDev (chunk-WERSD76P.js:3699)
+	invokeGuardedCallback (chunk-WERSD76P.js:3733)
+	invokeGuardedCallbackAndCatchFirstError (chunk-WERSD76P.js:3736)
+	executeDispatch (chunk-WERSD76P.js:7014)
+	processDispatchQueueItemsInOrder (chunk-WERSD76P.js:7034)
+	processDispatchQueue (chunk-WERSD76P.js:7043)
+	dispatchEventsForPlugins (chunk-WERSD76P.js:7051)
+	batchedUpdates$1 (chunk-WERSD76P.js:18913)
+	batchedUpdates (chunk-WERSD76P.js:3579)
+	dispatchEventForPluginEventSystem (chunk-WERSD76P.js:7173)
+	dispatchEventWithEnableCapturePhaseSelectiveHydrationWithoutDiscreteEventReplay (chunk-WERSD76P.js:5478)
+	dispatchEvent (chunk-WERSD76P.js:5472:93)
+	dispatchDiscreteEvent (chunk-WERSD76P.js:5449)
+[Log] 🔄 Detected conflicting property type change - performing new AI search (SearchResults.tsx, line 370)
+[Log] 🔍 Transport match result: – Array (3) (SearchResults.tsx, line 372)
+Array (3)
+[Log] 🔍 Search query for matching: – "\"near MRT\"" (SearchResults.tsx, line 373)
+[Log] 🔍 Is near query: – true (SearchResults.tsx, line 375)
+[Log] 🔍 Performing new AI search with query: – "near MRT" (SearchResults.tsx, line 389)
+[Log] 🔍 Base query: – "near MRT" (SearchResults.tsx, line 390)
+[Log] 🔍 Property types: – Array (7) (SearchResults.tsx, line 391)
+Array (7)
+[Log] 🟦 handleApplyFilters completed successfully (QuickFilters.tsx, line 1349)
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 11 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 11 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 11 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object
+[Log] AI Search Result Filters: – Object (SearchResults.tsx, line 310)
+Object
+[Log] Is conflict resolution search: – true (SearchResults.tsx, line 311)
+[Log] Setting new filters: – Object (SearchResults.tsx, line 312)
+Object
+[Log] 🔧 Setting AI search results: – 11 – "properties" (SearchResults.tsx, line 317)
+[Log] 🔧 First few properties: – Array (3) (SearchResults.tsx, line 318)
+Array (3)
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 11 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 11 (SearchResults.tsx, line 148)
+[Log] Skipping location filter for transport proximity search (SearchResults.tsx, line 218)
+[Log] Final filtered count: – 11 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object
+[Log] 🔍 Property selection debug: – Object (SearchResults.tsx, line 223)
+Object
+[Log] 🔍 Raw properties before filtering: – 11 (SearchResults.tsx, line 232)
+[Log] 🔍 Sample raw properties: – Array (2) (SearchResults.tsx, line 233)
+Array (2)
+[Log] ApplyQuickFilters Debug: – Object (SearchResults.tsx, line 133)
+Object
+[Log] AI search active - applying QuickFilters on top of AI results for refinement (SearchResults.tsx, line 144)
+[Log] After listing type filter: – 11 (SearchResults.tsx, line 148)
+[Log] After property type filter (industrial, warehouse, factory, cluster-factory, semi-d-factory, detached-factory, terrace-factory): – 0 – "from" – 11 (SearchResults.tsx, line 155)
+[Log] ⚠️ WARNING: Property type filter resulted in 0 properties! This might indicate a conflicting filter scenario. (SearchResults.tsx, line 157)
+[Log] Skipping location filter for AI search refinement - preserving AI location context (SearchResults.tsx, line 215)
+[Log] Final filtered count: – 0 (SearchResults.tsx, line 220)
+[Log] Search Debug: – Object (SearchResults.tsx, line 240)
+Object
+[Log] Pagination Debug: – Object (SearchResults.tsx, line 255)
+Object

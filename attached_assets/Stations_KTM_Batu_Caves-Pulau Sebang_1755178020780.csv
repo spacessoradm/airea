@@ -1,0 +1,27 @@
+Station Code,Station Name,Interchanges/Connections,District/City,State/Territory,Latitude,Longitude
+KC05,Batu Caves,,Gombak,Selangor,3.237904,101.681191
+KC04,Taman Wahyu,,Kuala Lumpur,Federal Territories,3.2144014,101.6727731
+KC03,Kampung Batu,12 Putrajaya Line,Kuala Lumpur,Federal Territories,3.20482,101.6756
+KC02,Batu Kentonmen,,Kuala Lumpur,Federal Territories,3.19825,101.68116
+KC01,Sentul,,Kuala Lumpur,Federal Territories,3.1824886,101.6888022
+KA04,Putra,2 Tanjung Malim-Port Klang Line  (PWTC) 3 Ampang Line 4 Sri Petaling Line,Kuala Lumpur,Federal Territories,3.16532,101.69109
+KA03,Bank Negara,2 Tanjung Malim-Port Klang Line  (Bandaraya) 3 Ampang Line 4 Sri Petaling Line,Kuala Lumpur,Federal Territories,3.1548053,101.6931397
+KA02,Kuala Lumpur,2 Tanjung Malim-Port Klang Line 5 Kelana Jaya Line (Pasar Seni) 9 Kajang Line (Pasar Seni)  KTM ETS,Kuala Lumpur,Federal Territories,3.0762302,101.710997
+KA01,KL Sentral,2 Tanjung Malim-Port Klang Line 5 Kelana Jaya Line 6 KLIA Ekspres 7 KLIA Transit 8 KL Monorail[Note 1] 9 Kajang Line (Muzium Negara) 10 KL Sentral-Terminal Skypark Line  KTM ETS,Kuala Lumpur,Federal Territories,3.13417,101.68611
+KB01,Mid Valley,(Abdullah Hukum) 2 Tanjung Malim-Port Klang Line 5 Kelana Jaya Line,Kuala Lumpur,Federal Territories,3.119008,101.678833
+KB02,Seputeh,,Kuala Lumpur,Federal Territories,3.1134307,101.6814956
+KB03,Salak Selatan,,Kuala Lumpur,Federal Territories,3.1049256,101.7055173
+KB04,Bandar Tasik Selatan,4 Sri Petaling Line 7 KLIA Transit  KTM ETS  Southern Integrated Terminal (TBS),Kuala Lumpur,Federal Territories,3.072012,101.70958
+KB05,Serdang,,Subang Jaya,Selangor,3.0230571,101.7158347
+KB06,Kajang,9 Kajang Line  KTM ETS,Hulu Langat,Selangor,2.9825736,101.7905805
+KB06A,Kajang 2,Hulu Langat,Selangor,,2.96254,101.79198
+KB07,UKM,,Hulu Langat,Selangor,2.93975,101.78762
+KB08,Bangi,,Hulu Langat,Selangor,2.9198401,101.780868
+KB09,Batang Benar,,Seremban,Negeri Sembilan,2.8297222,101.8266667
+KB10,Nilai,,Seremban,Negeri Sembilan,2.8022222,101.7994444
+KB11,Labu,,Seremban,Negeri Sembilan,2.754212,101.826635
+KB12,Tiroi,,Seremban,Negeri Sembilan,2.735666,101.8777
+KB13,Seremban,KTM ETS,Seremban,Negeri Sembilan,2.718842,101.940846
+KB14,Senawang,,Seremban,Negeri Sembilan,2.69035,101.97191
+KB15,Sungai Gadut,,Seremban,Negeri Sembilan,2.66062,101.99618
+KB16,Rembau,,Rembau,Negeri Sembilan,2.590525,102.0929861

@@ -1,0 +1,184 @@
+✅ 1. Multi-Language Input Scenarios
+
+1.1 Full Bahasa Melayu
+	•	“Cari rumah landed bawah RM700k dekat Shah Alam, minimum 4 bilik.”
+	•	Expected: landed, ≤700k, Shah Alam areas, ≥4 bedrooms.
+
+1.2 Full Mandarin
+	•	“我想找一间靠近Mid Valley的condo，budget 3000租。”
+	•	Expected: rental, condo, near Mid Valley, ≤RM3000.
+
+1.3 Full English
+	•	“Looking for a studio in Cyberjaya with balcony and pool view.”
+
+1.4 Tamil (basic understanding)
+	•	“சென்னை போல இருக்கும் area la cheap apartment.”
+(meaning: a familiar Indian community area)
+
+This tests GPT’s multilingual ability beyond main languages.
+
+⸻
+
+✅ 2. Mixed Languages + Rojak (Malaysia Style)
+
+2.1 Malay + English
+	•	“Nak cari condo yang got 2 carparks near KLCC budget 3k.”
+
+2.2 Mandarin + English
+	•	“找一个cheap cheap的 landed house near Kuchai Lama.”
+
+2.3 Mandarin + Malay
+	•	“我想要sunway那边的公寓，价钱不要太贵，可以renovated siap.”
+
+2.4 Full Rojak + Emojis
+	•	“Bro any rumah nice nice around PJ, cheap la pls 😂🔥 minimum 3 bilik.”
+
+⸻
+
+✅ 3. Users Who Give Vague or Ambiguous Requirements
+
+3.1 Too vague
+	•	“I want good house.”
+	•	Expect: AI asks to infer default filters; produces fallback.
+
+3.2 No location
+	•	“Looking for cheap house.”
+	•	Expect: AI doesn’t hallucinate; asks for clarification or gives broad search.
+
+3.3 No budget
+	•	“Condo in KL nice one.”
+	•	Expect: AI sets wide budget range, but not hallucinate.
+
+⸻
+
+✅ 4. User Typos, Misspellings, Non-Standard Text
+
+4.1 Keyboard typos
+	•	“Conddo near ampkng point”
+(Ampang Point)
+
+4.2 Voice-to-text mistakes
+	•	“Need house three room Rama lama.”
+(Should be: near “Rama Lama” or “Rawang”?)
+
+4.3 Short-form slang
+	•	“3r2b condo pj murah pls”
+
+4.4 Totally messy input
+	•	“puncak jalil…errr 600k… want landed la not condo.”
+
+⸻
+
+✅ 5. Scenario: Complex Requirements
+
+5.1 Too many filters
+	•	“Landed, corner lot, not facing T-junction, near MRT, budget 1.2m, new house only, must have 4 rooms, big kitchen.”
+
+Test if AI still produces structured JSON cleanly.
+
+5.2 Negative filters
+	•	“Any condo except Bukit Jalil area.”
+
+5.3 Priorities
+	•	“Prefer near LRT but if cannot, then as long below 2k also ok.”
+
+⸻
+
+✅ 6. “Why this property?” Explanation Testing
+
+Ask AI to summarise results:
+	•	“Why this listing matches my search?”
+Test the correctness of reasoning.
+
+⸻
+
+✅ 7. Rental vs Sale Testing
+
+7.1 Rental but user typed “RM500k”
+	•	System must detect unrealistic context.
+
+7.2 Sale but user typed “RM2000 je”
+	•	Detect it’s a rental budget.
+
+⸻
+
+✅ 8. User Behaviour & Preference Learning
+
+8.1 Click-consistency
+
+If user keeps clicking:
+	•	new units
+	•	low density
+	•	corner lots
+AI must automatically re-rank next result pages.
+
+8.2 Repeat user
+
+Search today: “condo near Bangsar”
+Next day: “not too far from Bangsar” → expect personalised results.
+
+⸻
+
+✅ 9. Hallucination & Safety Tests
+
+9.1 Property that doesn’t exist
+	•	“Got condo with private swimming pool RM800?”
+Expect: “no such listings”, no hallucination.
+
+9.2 AI must not create imaginary developers
+	•	“Which developer built this?”
+If info not in listing → AI must say “unknown”.
+
+9.3 AI must not guess strata fees
+
+Unless in database.
+
+⸻
+
+✅ 10. Location Boundary Tests
+
+10.1 Nearby regions
+
+User searches: “near KLCC” → system must consider:
+	•	KLCC
+	•	Ampang
+	•	TRX
+	•	Jalan Sultan Ismail
+
+10.2 Ambiguous location
+	•	“Puchong Jaya or PJS?”
+AI must parse two location options.
+
+⸻
+
+✅ 11. Feature Extraction Accuracy Tests
+
+Test detection of:
+	•	“must have balcony”
+	•	“no carpet floors”
+	•	“pet friendly”
+	•	“not ground floor”
+	•	“high floor only”
+	•	“not facing highway”
+
+⸻
+
+✅ 12. Budget Reasoning Tests
+
+12.1 Range
+	•	“budget 600-800k”
+Parsed properly.
+
+12.2 Hard cap
+	•	“max 400k cannot lebih.”
+
+12.3 Soft cap
+	•	“budget around 700k la but negotiable.”
+
+⸻
+
+✅ 13. Emoji Interpretation Tests
+	•	“🔥🔥🔥 condo near KL for investment?”
+	•	“🌳 want green area one like forest feel.”
+
+AI should extract meaning (e.g., “green environment”, “high value”).

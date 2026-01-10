@@ -1,0 +1,83 @@
+Stage 1: GPT Query Interpreter (Semantic Understanding Layer)
+Every time user enters a natural language query:
+1️⃣ Detect & normalise language
+Auto-detect Bahasa, English, Mandarin, Tamil, Manglish
+Normalise slang (contoh: “rumah landed besar sikit budget low”)
+Extract intent → “landed house”
+2️⃣ Extract structured search parameters
+GPT transforms messy natural language into structured filters:
+Example Input:
+“Cari rumah landed yang murah la, near Sunway… at least 3 bilik… pet friendly…”
+GPT Output → JSON
+{
+  "property_type": ["landed", "terrace", "semi-d"],
+  "min_bedrooms": 3,
+  "pet_friendly": true,
+  "max_price": 600000,
+  "locations": ["Sunway", "Bandar Sunway", "Subang Jaya"],
+  "urgency": "normal",
+  "special_notes": ["affordable", "family-friendly"]
+}
+3️⃣ Pass this JSON to your existing search engine
+This avoids rebuilding the whole search engine.
+✅ 2. Search Engine Improvements (You Already Have This)
+Your current engine will:
+Match property type
+Match estimated price range
+Match bedrooms
+Expand location context (Sunway → Subang, PJ)
+Boost relevancy score
+Remove listings not aligned with extracted intent
+All you need is better filters from GPT → which solves natural language understanding.
+✅ 3. AI Relevance Scoring Layer
+After the search engine returns listings, GPT re-ranks them using vectors:
+Relevance factors:
+Semantic match with intent
+Distance to preferred area
+Price proximity
+Bed/bath suitability
+User preference history (if available)
+Example:
+If user previously clicked more “corner lots”, GPT boosts corner lots automatically.
+✅ 4. Multi-language & Mixed Language Support
+You do NOT need a translator. GPT 5.1 already handles:
+“找便宜 condo near KLCC 有 swimming pool 的?”
+“Rumah landed yang besar sikit dekat with Damansara”
+“Need condo with 2 car parks la bro”
+“Gimme cheap house dekat Penang 3 bilik rm300k below”
+GPT normalises all languages into structured JSON.
+✅ 5. Example System Prompt You Can Use in Your API
+Use this as your system role for GPT:
+You are AIREA’s Property Search Query Interpreter.
+
+Your job:
+1. Understand any user query in any language (Malay, English, Mandarin, mixed).
+2. Convert the query into structured search filters in JSON.
+3. Never hallucinate listings. Only output filters.
+4. Include: matching property types, budget range, bedrooms, bathrooms, location list, must-have features, excluded features, urgency, tenancy/sale.
+5. When user is vague, infer reasonable defaults.
+6. Always produce clean JSON with no explanations.
+Example to user:
+“我想找一个便宜的 landed near Kuchai Lama, but not old house.”
+GPT Output:
+{
+  "property_type": ["landed"],
+  "locations": ["Kuchai Lama", "Old Klang Road", "Taman Desa"],
+  "price_max": 750000,
+  "exclude_conditions": ["old", "dilapidated"],
+  "transaction_type": "sale"
+}
+✅ 6. Bonus: AI “Search Memory”
+If your user searches often, AI learns preferences:
+prefers newer units
+prefers corner lots
+hates high density
+max budget consistent
+prefers LRT accessible units
+This improves future ranking automatically.
+✅ 7. Optional: AI Listing Description Summaries
+For each listing, GPT can generate:
+“Why this matches your search”
+Highlight missing criteria
+Provide short summary
+This makes results more personalised.

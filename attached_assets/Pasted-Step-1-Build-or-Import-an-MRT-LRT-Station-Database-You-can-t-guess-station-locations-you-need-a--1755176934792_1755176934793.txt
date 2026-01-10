@@ -1,0 +1,49 @@
+Step 1 — Build or Import an MRT/LRT Station Database
+You can’t guess station locations — you need a full dataset.
+Tell Replit:
+“Get me a list of all MRT, LRT, Monorail, and KTM stations in Malaysia with their names, line names, and GPS coordinates (lat/lng). Store this in a database table called stations with columns: id, station_name, line, latitude, longitude.”
+💡 Sources:
+You can scrape official MRT/LRT line data from RapidKL’s website or Wikipedia.
+Alternatively, you can manually compile in CSV → import into PostgreSQL/MySQL.
+Step 2 — Add latitude/longitude to Every Property Listing
+This is crucial so you can calculate distance from MRT.
+Tell Replit:
+“Ensure every property in the database has latitude and longitude coordinates. If not provided, geocode the address using Nominatim or Google Maps API.”
+Step 3 — Search Logic for “Near MRT”
+Now you need geospatial querying.
+Example in SQL (PostGIS-enabled):
+SELECT p.*, s.station_name, 
+       ST_DistanceSphere(
+           ST_MakePoint(p.longitude, p.latitude),
+           ST_MakePoint(s.longitude, s.latitude)
+       ) AS distance_m
+FROM properties p
+JOIN stations s ON ST_DistanceSphere(
+                     ST_MakePoint(p.longitude, p.latitude),
+                     ST_MakePoint(s.longitude, s.latitude)
+                 ) <= 1000
+WHERE p.bedrooms = 3
+ORDER BY distance_m ASC;
+Explanation:
+<= 1000 → within 1 km of an MRT station.
+You can change to 500m or 2km based on “near” definition.
+If you don’t use PostGIS, you can still use Haversine formula in code to filter properties within radius.
+Step 4 — Natural Language Parsing
+So the user can type “3-bedroom condo near MRT” instead of clicking filters.
+Tell Replit:
+“Implement a simple NLP parser that detects:
+Number of bedrooms (e.g., ‘3-bedroom’ → bedrooms = 3)
+Proximity requirement (‘near MRT’, ‘near LRT’ → radius search from stations table)
+Property type (‘condo’, ‘apartment’ → property_type = condo)
+Then build an SQL query dynamically using these extracted filters.”
+You can do this with:
+OpenAI API for natural language → structured query.
+Or simple regex + keyword mapping for MVP.
+Search Bar Flow
+User types: "3 bedroom condo near MRT"
+System extracts:
+bedrooms = 3
+property_type = condo
+near_station = true
+DB query runs with radius filter from MRT stations list.
+Results are sorted by closest station distance.
