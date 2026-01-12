@@ -1,3 +1,8 @@
+import { precacheAndRoute } from 'workbox-precaching'
+
+// REQUIRED for injectManifest
+precacheAndRoute(self.__WB_MANIFEST)
+
 // Service Worker for instant PWA loading like Instagram
 const CACHE_NAME = 'airea-v6'; // Updated to clear old cache after QuickFilters layout fixes
 const STATIC_CACHE = 'airea-static-v6';
