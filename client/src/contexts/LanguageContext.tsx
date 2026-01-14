@@ -148,7 +148,6 @@ const translations = {
     guidesInsights: 'Guides & Insights',
     all: 'All',
     guides: 'Guides',
-    insights: 'Insights',
     news: 'News',
     
     // SimpleSearch specific
@@ -292,7 +291,6 @@ const translations = {
     guidesInsights: 'Panduan & Wawasan',
     all: 'Semua',
     guides: 'Panduan',
-    insights: 'Wawasan',
     news: 'Berita',
     
     // SimpleSearch specific
@@ -436,7 +434,6 @@ const translations = {
     guidesInsights: '指南和洞察',
     all: '全部',
     guides: '指南',
-    insights: '洞察',
     news: '新闻',
     
     // SimpleSearch specific
