@@ -95,7 +95,7 @@ export default function EnhancedPropertyForm({
       price: initialData?.price?.toString() || "",
       bedrooms: initialData?.bedrooms || 1,
       bathrooms: initialData?.bathrooms || 1,
-      squareFeet: initialData?.squareFeet || undefined,
+      squareFeet: initialData?.builtUpSize || undefined,
       address: initialData?.address || "",
       city: initialData?.city || "",
       state: initialData?.state || "Kuala Lumpur",
@@ -142,7 +142,7 @@ export default function EnhancedPropertyForm({
       errors.push("Property location must be selected on the map");
     }
     
-    if (data.images.length === 0) {
+    if (!data.images || data.images.length === 0) {
       errors.push("At least one property image is required");
     }
 
@@ -154,7 +154,17 @@ export default function EnhancedPropertyForm({
     // Convert form data to InsertProperty format
     const propertyData: InsertProperty = {
       ...data,
-      price: data.price, // Keep as string for now
+      title: data.title || "",
+      description: data.description || "",
+      propertyType: data.propertyType || "apartment",
+      listingType: data.listingType || "rent",
+      price: data.price || "0",
+      bedrooms: data.bedrooms || 0,
+      bathrooms: data.bathrooms || 1,
+      address: data.address || "",
+      city: data.city || "",
+      state: data.state || "",
+      postalCode: data.postalCode || null,
       squareFeet: data.squareFeet ?? null,
       landSize: data.landSize ?? null,
       amenities: [], // Set empty array since amenities are removed
@@ -199,7 +209,7 @@ export default function EnhancedPropertyForm({
                   <FormItem>
                     <FormLabel>Property Title *</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., Spacious 3BR Condo in Mont Kiara" {...field} />
+                      <Input placeholder="e.g., Spacious 3BR Condo in Mont Kiara" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -212,7 +222,7 @@ export default function EnhancedPropertyForm({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Property Type *</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} defaultValue={field.value || "apartment"}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Select property type" />
@@ -243,6 +253,7 @@ export default function EnhancedPropertyForm({
                       placeholder="Provide detailed description including layout, condition, nearby facilities, and any unique features..."
                       className="min-h-[120px]"
                       {...field}
+                      value={field.value || ""}
                       onChange={(e) => {
                         field.onChange(e);
                         setDescriptionCount(e.target.value.length);
@@ -264,7 +275,7 @@ export default function EnhancedPropertyForm({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Listing Type *</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} defaultValue={field.value || "rent"}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue />
@@ -287,7 +298,7 @@ export default function EnhancedPropertyForm({
                   <FormItem>
                     <FormLabel>Price (RM) *</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="2500" {...field} />
+                      <Input type="number" placeholder="2500" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -304,6 +315,7 @@ export default function EnhancedPropertyForm({
                       <Input 
                         type="number" 
                         {...field}
+                        value={field.value || 0}
                         onChange={(e) => field.onChange(parseInt(e.target.value) || 0)}
                       />
                     </FormControl>
@@ -322,6 +334,7 @@ export default function EnhancedPropertyForm({
                       <Input 
                         type="number" 
                         {...field}
+                        value={field.value || 1}
                         onChange={(e) => field.onChange(parseInt(e.target.value) || 1)}
                       />
                     </FormControl>
@@ -339,10 +352,10 @@ export default function EnhancedPropertyForm({
           initialLocation={
             form.watch("latitude") && form.watch("longitude") 
               ? {
-                  lat: parseFloat(form.watch("latitude")),
-                  lng: parseFloat(form.watch("longitude")),
-                  address: form.watch("address"),
-                  displayAddress: form.watch("title") // Use property title as display name if available
+                  lat: parseFloat(form.watch("latitude") || "0"),
+                  lng: parseFloat(form.watch("longitude") || "0"),
+                  address: form.watch("address") || "",
+                  displayAddress: form.watch("title") || undefined // Use property title as display name if available
                 }
               : undefined
           }
@@ -362,7 +375,7 @@ export default function EnhancedPropertyForm({
                   <FormItem>
                     <FormLabel>City *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Kuala Lumpur" {...field} />
+                      <Input placeholder="Kuala Lumpur" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -376,7 +389,7 @@ export default function EnhancedPropertyForm({
                   <FormItem>
                     <FormLabel>State *</FormLabel>
                     <FormControl>
-                      <Input placeholder="Kuala Lumpur" {...field} />
+                      <Input placeholder="Kuala Lumpur" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -390,7 +403,7 @@ export default function EnhancedPropertyForm({
                   <FormItem>
                     <FormLabel>Postal Code *</FormLabel>
                     <FormControl>
-                      <Input placeholder="50088" {...field} />
+                      <Input placeholder="50088" {...field} value={field.value || ""} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -423,7 +436,8 @@ export default function EnhancedPropertyForm({
                         type="number" 
                         placeholder="1200"
                         {...field}
-                        onChange={(e) => field.onChange(e.target.value ? parseInt(e.target.value) : undefined)}
+                        value={field.value || ""}
+                        onChange={(e) => field.onChange(e.target.value ? parseInt(e.target.value) : null)}
                       />
                     </FormControl>
                     <FormMessage />
@@ -442,7 +456,8 @@ export default function EnhancedPropertyForm({
                         type="number" 
                         placeholder="5000"
                         {...field}
-                        onChange={(e) => field.onChange(e.target.value ? parseInt(e.target.value) : undefined)}
+                        value={field.value || ""}
+                        onChange={(e) => field.onChange(e.target.value ? parseInt(e.target.value) : null)}
                       />
                     </FormControl>
                     <FormDescription>
@@ -459,7 +474,7 @@ export default function EnhancedPropertyForm({
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Property Condition *</FormLabel>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                    <Select onValueChange={field.onChange} defaultValue={field.value || undefined}>
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue />
@@ -496,7 +511,7 @@ export default function EnhancedPropertyForm({
                 <FormItem>
                   <FormLabel>Agent License Number *</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., REN12345" {...field} />
+                    <Input placeholder="e.g., REN12345" {...field} value={field.value || ""} />
                   </FormControl>
                   <FormDescription>
                     Your registered real estate agent license number for verification
