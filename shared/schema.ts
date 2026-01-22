@@ -1061,24 +1061,18 @@ export const insertPropertySchema = createInsertSchema(properties).omit({
   minimumDescriptionMet: true,
 }).extend({
   // Enhanced validation rules for agent accountability
-  description: z.string().min(1, "Description is required"),
+  description: z.string().min(1, "Description is required").nullable().optional(),
   propertyCondition: z.enum(["excellent", "good", "fair", "needs_renovation"]).nullable().optional(),
   furnishedCondition: z.enum(["unfurnished", "partially_furnished", "fully_furnished"]).nullable().optional(),
-  agentLicense: z.string().min(5, "Valid agent license is required for property listings"),
+  agentLicense: z.string().min(5, "Valid agent license is required for property listings").nullable().optional(),
   // Coordinates are optional - backend will geocode from address if not provided
-  latitude: z.string().refine((val) => {
-    const num = parseFloat(val);
-    return !isNaN(num) && num >= -90 && num <= 90;
-  }, "Valid latitude coordinate is required for property location").optional(),
-  longitude: z.string().refine((val) => {
-    const num = parseFloat(val);
-    return !isNaN(num) && num >= -180 && num <= 180;
-  }, "Valid longitude coordinate is required for property location").optional(),
-  landSize: z.number().min(1, "Land size must be greater than 0").optional(),
+  latitude: z.string().nullable().optional(),
+  longitude: z.string().nullable().optional(),
+  landSize: z.number().nullable().optional(),
   // Price field: accept both number and string, then convert to string
-  price: z.union([z.string(), z.number()]).transform(val => val.toString()),
+  price: z.union([z.string(), z.number()]).transform(val => val ? val.toString() : "0"),
   // ROI field: accept both number and string, then convert to string (same as price)
-  roi: z.union([z.string(), z.number()]).transform(val => val.toString()).optional(),
+  roi: z.union([z.string(), z.number()]).transform(val => val ? val.toString() : null).nullable().optional(),
 });
 
 export type InsertProperty = z.infer<typeof insertPropertySchema>;
